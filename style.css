@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --clr-primary: #212936;
+    --clr-secondary: #121826;
+    --clr-tertiary: #394150;
+    --clr-accent: #845EEE;
+    --clr-accent-focus: #652CD1;
+    --clr-font-primary: #E5E7EB;
+    --clr-font-secondary: #A1A1A9;
+    --clr-font-tertiary: #4D5562; 
+
+    --fs-700: 1.25rem;
+    --fs-500: 1rem;
+    --fs-400: .875rem;
+    --fs-300: .75rem;
+
+    --fw-bold: 700;
+    --fw-semibold: 600;
+    --fw-medium: 500;
+    --fw-regular: 400;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: var(--fs-500);
+    font-weight: var(--fw-regular);
+    color: var(--clr-font-primary);
+    background: var(--clr-secondary);
+}
+
+/* RESETS */
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* TYPOGRAPHY */
+
+h1 {
+    font-size: var(--fs-700);
+    font-weight: var(--fw-semibold);
+}
+
+label {
+    font-size: var(--fs-300);
+    font-weight: var(--fw-medium);
+    color: var(--clr-font-secondary);
+}
+
+/* LAYOUT */
+
+main {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+.container {
+    width: 500px;
+}
+
+form {
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    padding: 2rem;
+    background: var(--clr-primary);
+    border: 1px solid var(--clr-font-tertiary);
+    border-radius: 1rem;
+}
+
+
+
+input {
+    background: transparent;
+    padding: 1rem;
+    outline: none;
+    border: 2px solid var(--clr-font-tertiary);
+    border-radius: 1rem;
+
+    &::placeholder {
+        opacity: .7;
+    }
+}
+
+.topics {
+    display: grid;
+    gap: .5rem;
+
+    & p {
+        background: var(--clr-tertiary);
+        padding: 1rem;
+        border: 1px solid var(--clr-font-tertiary);
+        border-radius: 1rem;
+        cursor: pointer;
+        opacity: .7;
+        transition: all .3s ease;
+
+        &:hover, &:focus {
+            opacity: 1;
+        }
+    }
+
+    & p.chosen {
+        background: linear-gradient(var(--clr-accent), var(--clr-accent-focus));
+        color: var(--clr-font-primary);
+        opacity: 1;
+    }
+}
+
+.submit-btn {
+    font-weight: var(--fw-semibold);
+    width: fit-content;
+    padding-inline: 2rem;
+    margin-inline: auto;
+    background: linear-gradient(var(--clr-accent), var(--clr-accent-focus));
+    color: var(--clr-font-primary);
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all .3s ease;
+
+    &:hover, &:focus {
+        filter: opacity(.8);
+    }
+}

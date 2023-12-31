@@ -2,6 +2,8 @@ window.onload = function () {
     const forms = document.querySelectorAll('form');
     const submitBtn = document.querySelectorAll('.submit-btn');
     const topics = document.querySelectorAll('.topic');
+    const bars = document.querySelectorAll('.bar');
+    const progress = document.querySelector('.progress-text');
 
     topics.forEach(topic => {
         topic.addEventListener('click', () => {
@@ -23,6 +25,8 @@ window.onload = function () {
 
             forms[0].style.transform = 'translateX(-100%)';
             forms[1].style.transform = 'translateX(0)';
+            bars[1].classList.add('current');
+            progress.innerHTML = 'Step 2 of 3';
         } else {
             alert('Please fill in all fields correctly!');
         }
@@ -41,6 +45,8 @@ window.onload = function () {
 
             forms[1].style.transform = 'translateX(-100%)';
             forms[2].style.transform = 'translateX(0)';
+            bars[2].classList.add('current');
+            progress.innerHTML = 'Step 3 of 3';
         } else {
             alert('At least one topic must be selected!');
         }

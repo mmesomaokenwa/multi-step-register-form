@@ -20,8 +20,8 @@ window.onload = function () {
             let emailInput = document.querySelector('.email');
             localStorage.setItem("userName", name);
             localStorage.setItem('userEmail', email);
-            nameInput.innerHTML = name;
-            emailInput.innerHTML = email;
+            nameInput.textContent = name;
+            emailInput.textContent = email;
 
             forms[0].style.transform = 'translateX(-100%)';
             forms[1].style.transform = 'translateX(0)';
